@@ -90,7 +90,7 @@
     "copyright": "© 2024 Biotools. All rights reserved.",
     "version": "Version 1.0.0",
     "brandDescription": "Cross-platform bioinformatics sequence processing toolkit supporting DNA, RNA and protein sequence operations.",
-    "platformSupport": "Supports Web, Mini-programs, Raycast and uTools platforms.",
+    "platformSupport": "Supports Web, Raycast and uTools platforms.",
     "features": "Features",
     "platforms": "Platforms",
     "webApp": "Web App",

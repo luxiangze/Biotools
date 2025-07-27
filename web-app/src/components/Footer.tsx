@@ -68,11 +68,6 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <span className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                  {t('footer.miniProgram')}
-                </span>
-              </li>
-              <li>
-                <span className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
                   {t('footer.raycastExtension')}
                 </span>
               </li>

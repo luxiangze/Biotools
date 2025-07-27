@@ -65,13 +65,7 @@ const Header: React.FC<HeaderProps> = ({ apiStatus }) => {
             {/* 导航链接 */}
             <nav className="hidden md:flex items-center space-x-6">
               <a
-                href="#"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
-              >
-                {t('navigation.about')}
-              </a>
-              <a
-                href="https://github.com"
+                href="https://github.com/luxiangze/Biotools"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
