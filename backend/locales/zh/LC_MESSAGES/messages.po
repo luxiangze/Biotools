@@ -1,0 +1,135 @@
+# Chinese translations for Biotools API
+# Copyright (C) 2024
+# This file is distributed under the same license as the Biotools package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Biotools 1.0\n"
+"POT-Creation-Date: 2024-01-01 12:00+0000\n"
+"PO-Revision-Date: 2024-01-01 12:00+0000\n"
+"Last-Translator: Biotools Team\n"
+"Language: zh\n"
+"Language-Team: Chinese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# API Information
+msgid "api_title"
+msgstr "生物工具 API"
+
+msgid "api_description"
+msgstr "生物序列处理工具套件 API - 支持单个序列和 FASTA 批量处理"
+
+msgid "api_welcome"
+msgstr "欢迎使用生物工具 API！访问 /docs 查看交互式文档。"
+
+msgid "api_status_online"
+msgstr "API 运行正常"
+
+# Common Messages
+msgid "success"
+msgstr "成功"
+
+msgid "error"
+msgstr "错误"
+
+msgid "invalid_sequence"
+msgstr "无效的序列格式"
+
+msgid "invalid_sequence_type"
+msgstr "无效的序列类型。支持的类型：dna, rna, protein, auto"
+
+msgid "processing_error"
+msgstr "序列处理错误"
+
+msgid "file_upload_error"
+msgstr "文件上传错误"
+
+msgid "file_not_fasta"
+msgstr "上传的文件不是 FASTA 格式"
+
+# Sequence Types
+msgid "dna_sequence"
+msgstr "DNA 序列"
+
+msgid "rna_sequence"
+msgstr "RNA 序列"
+
+msgid "protein_sequence"
+msgstr "蛋白质序列"
+
+msgid "unknown_sequence"
+msgstr "未知序列类型"
+
+# Operations
+msgid "reverse_complement"
+msgstr "反向互补"
+
+msgid "transcription"
+msgstr "转录（DNA 转 RNA）"
+
+msgid "reverse_transcription"
+msgstr "反转录（RNA 转 DNA）"
+
+msgid "translation"
+msgstr "翻译为蛋白质"
+
+msgid "uppercase_conversion"
+msgstr "转换为大写"
+
+msgid "lowercase_conversion"
+msgstr "转换为小写"
+
+msgid "sequence_statistics"
+msgstr "序列统计"
+
+# Field Descriptions
+msgid "input_sequence_desc"
+msgstr "输入的生物序列"
+
+msgid "sequence_type_desc"
+msgstr "序列类型：dna, rna, protein, auto"
+
+msgid "sequence_id_desc"
+msgstr "序列标识符"
+
+msgid "fasta_content_desc"
+msgstr "FASTA 格式的序列内容"
+
+msgid "processing_result_desc"
+msgstr "处理结果"
+
+msgid "original_sequence_desc"
+msgstr "原始序列"
+
+msgid "batch_results_desc"
+msgstr "批量处理结果"
+
+msgid "total_count_desc"
+msgstr "总序列数量"
+
+msgid "success_count_desc"
+msgstr "成功处理数量"
+
+msgid "error_count_desc"
+msgstr "错误数量"
+
+msgid "error_details_desc"
+msgstr "错误详情"
+
+# Statistics
+msgid "sequence_length"
+msgstr "序列长度"
+
+msgid "nucleotide_composition"
+msgstr "核苷酸组成"
+
+msgid "amino_acid_composition"
+msgstr "氨基酸组成"
+
+msgid "gc_content"
+msgstr "GC 含量"
+
+msgid "molecular_weight"
+msgstr "分子量"

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <footer className="bg-white border-t border-gray-200 mt-12">
       <div className="container mx-auto px-4 py-8">
@@ -13,40 +16,40 @@ const Footer: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z" />
                 </svg>
               </div>
-              <span className="text-xl font-bold text-gray-900">Biotools</span>
+              <span className="text-xl font-bold text-gray-900">{t('app.title')}</span>
             </div>
             <p className="text-gray-600 mb-4">
-              跨平台的生物序列处理工具套件，支持 DNA、RNA 和蛋白质序列的各种操作。
+              {t('footer.brandDescription')}
             </p>
             <p className="text-sm text-gray-500">
-              支持 Web、小程序、Raycast 和 uTools 等多个平台。
+              {t('footer.platformSupport')}
             </p>
           </div>
 
           {/* 功能特性 */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
-              功能特性
+              {t('footer.features')}
             </h3>
             <ul className="space-y-2">
               <li>
                 <span className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                  序列反向互补
+                  {t('footer.reverseComplement')}
                 </span>
               </li>
               <li>
                 <span className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                  转录与反转录
+                  {t('footer.transcriptionReverseTranscription')}
                 </span>
               </li>
               <li>
                 <span className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                  蛋白质翻译
+                  {t('footer.proteinTranslation')}
                 </span>
               </li>
               <li>
                 <span className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                  序列统计分析
+                  {t('footer.sequenceAnalysis')}
                 </span>
               </li>
             </ul>
@@ -55,27 +58,27 @@ const Footer: React.FC = () => {
           {/* 平台支持 */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
-              平台支持
+              {t('footer.platforms')}
             </h3>
             <ul className="space-y-2">
               <li>
                 <span className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                  Web 应用
+                  {t('footer.webApp')}
                 </span>
               </li>
               <li>
                 <span className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                  微信小程序
+                  {t('footer.miniProgram')}
                 </span>
               </li>
               <li>
                 <span className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                  Raycast 插件
+                  {t('footer.raycastExtension')}
                 </span>
               </li>
               <li>
                 <span className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                  uTools 插件
+                  {t('footer.utoolsPlugin')}
                 </span>
               </li>
             </ul>
@@ -84,7 +87,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-gray-500">
-            © 2024 Biotools. 基于 MIT 许可证开源。
+            {t('footer.copyright')}
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a

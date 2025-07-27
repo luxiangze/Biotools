@@ -1,10 +1,10 @@
 """
 Biotools Backend API
-基于 FastAPI 的生物序列处理后端服务
-支持单个序列和 FASTA 格式的批量处理
+Internationalized bioinformatics sequence processing backend service
+Supports single sequence and FASTA batch processing
 """
 
-from fastapi import FastAPI, HTTPException, File, UploadFile
+from fastapi import FastAPI, HTTPException, File, UploadFile, Request, Header
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import Optional, Dict, Any, List, Union
@@ -16,11 +16,12 @@ from Bio.SeqUtils.ProtParam import ProteinAnalysis
 from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
 import uvicorn
+from i18n import _, get_language_from_header, get_api_description
 
 # 创建 FastAPI 应用
 app = FastAPI(
     title="Biotools API",
-    description="生物序列处理工具套件 API - 支持单个序列和 FASTA 批量处理",
+    description=get_api_description('en'),  # Default to English, will be dynamic in routes
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc"
@@ -37,17 +38,17 @@ app.add_middleware(
 
 # 数据模型
 class SequenceInput(BaseModel):
-    sequence: str = Field(..., description="输入的生物序列")
-    sequence_type: Optional[str] = Field("auto", description="序列类型: dna, rna, protein, auto")
-    sequence_id: Optional[str] = Field(None, description="序列标识符")
+    sequence: str = Field(..., description="Input biological sequence")
+    sequence_type: Optional[str] = Field("auto", description="Sequence type: dna, rna, protein, auto")
+    sequence_id: Optional[str] = Field(None, description="Sequence identifier")
 
 class FastaInput(BaseModel):
-    fasta_content: str = Field(..., description="FASTA 格式的序列内容")
-    sequence_type: Optional[str] = Field("auto", description="序列类型: dna, rna, protein, auto")
+    fasta_content: str = Field(..., description="FASTA format sequence content")
+    sequence_type: Optional[str] = Field("auto", description="Sequence type: dna, rna, protein, auto")
 
 class SequenceOutput(BaseModel):
-    result: str = Field(..., description="处理结果")
-    original_sequence: str = Field(..., description="原始序列")
+    result: str = Field(..., description="Processing result")
+    original_sequence: str = Field(..., description="Original sequence")
     sequence_type: str = Field(..., description="检测到的序列类型")
     sequence_id: Optional[str] = Field(None, description="序列标识符")
     metadata: Optional[Dict[str, Any]] = Field(None, description="额外的元数据信息")

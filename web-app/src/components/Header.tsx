@@ -1,10 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface HeaderProps {
   apiStatus: 'checking' | 'online' | 'offline';
 }
 
 const Header: React.FC<HeaderProps> = ({ apiStatus }) => {
+  const { t } = useTranslation();
+  
   const getStatusColor = () => {
     switch (apiStatus) {
       case 'online':
@@ -21,13 +25,13 @@ const Header: React.FC<HeaderProps> = ({ apiStatus }) => {
   const getStatusText = () => {
     switch (apiStatus) {
       case 'online':
-        return '在线';
+        return t('status.apiOnline');
       case 'offline':
-        return '离线';
+        return t('status.apiOffline');
       case 'checking':
-        return '检查中';
+        return t('status.checking');
       default:
-        return '未知';
+        return t('status.error');
     }
   };
 
@@ -43,8 +47,8 @@ const Header: React.FC<HeaderProps> = ({ apiStatus }) => {
                 </svg>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Biotools</h1>
-                <p className="text-sm text-gray-500">生物序列处理工具套件</p>
+                <h1 className="text-xl font-bold text-gray-900">{t('app.title')}</h1>
+                <p className="text-sm text-gray-500">{t('app.subtitle')}</p>
               </div>
             </div>
           </div>
@@ -64,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ apiStatus }) => {
                 href="#"
                 className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
               >
-                文档
+                {t('navigation.about')}
               </a>
               <a
                 href="https://github.com"
@@ -75,6 +79,9 @@ const Header: React.FC<HeaderProps> = ({ apiStatus }) => {
                 GitHub
               </a>
             </nav>
+            
+            {/* 语言切换器 */}
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

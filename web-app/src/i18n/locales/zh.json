@@ -1,0 +1,105 @@
+{
+  "app": {
+    "title": "生物工具",
+    "subtitle": "生物信息学序列处理工具包",
+    "description": "专业的生物信息学工具，用于 DNA、RNA 和蛋白质序列分析"
+  },
+  "navigation": {
+    "home": "首页",
+    "tools": "工具",
+    "about": "关于",
+    "language": "语言"
+  },
+  "tools": {
+    "categories": {
+      "basic": "基础工具",
+      "conversion": "序列转换",
+      "analysis": "序列分析"
+    },
+    "reverseComplement": {
+      "name": "反向互补",
+      "description": "生成 DNA 序列的反向互补序列"
+    },
+    "transcribe": {
+      "name": "DNA 转录",
+      "description": "将 DNA 序列转录为 RNA (T→U)"
+    },
+    "reverseTranscribe": {
+      "name": "RNA 反转录",
+      "description": "将 RNA 序列反转录为 DNA (U→T)"
+    },
+    "translate": {
+      "name": "翻译",
+      "description": "将 DNA/RNA 序列翻译为蛋白质"
+    },
+    "uppercase": {
+      "name": "转大写",
+      "description": "将序列转换为大写字母"
+    },
+    "lowercase": {
+      "name": "转小写",
+      "description": "将序列转换为小写字母"
+    },
+    "stats": {
+      "name": "序列统计",
+      "description": "计算序列组成和性质"
+    }
+  },
+  "interface": {
+    "sequenceInput": "序列输入",
+    "inputLabel": "输入生物序列 (DNA/RNA/蛋白质)",
+    "inputPlaceholder": "请输入您的生物序列，例如：ATCGATCGATCG",
+    "inputDescription": "支持 DNA、RNA 和蛋白质序列。系统会自动检测序列类型。",
+    "sequenceType": "序列类型",
+    "autoDetect": "自动检测",
+    "dna": "DNA",
+    "rna": "RNA",
+    "protein": "蛋白质",
+    "process": "处理",
+    "processing": "处理中...",
+    "clear": "清除全部",
+    "copy": "复制结果",
+    "copied": "已复制！",
+    "result": "结果",
+    "originalSequence": "原始序列",
+    "processedSequence": "处理后序列",
+    "processSequence": "处理序列",
+    "availableTools": "可用工具"
+  },
+  "statistics": {
+    "length": "长度",
+    "composition": "组成",
+    "gcContent": "GC 含量",
+    "molecularWeight": "分子量",
+    "sequenceType": "序列类型"
+  },
+  "status": {
+    "apiOnline": "API 在线",
+    "apiOffline": "API 离线",
+    "checking": "检查连接中...",
+    "error": "发生错误",
+    "success": "成功"
+  },
+  "errors": {
+    "invalidSequence": "无效的序列格式",
+    "networkError": "网络连接错误",
+    "serverError": "服务器错误",
+    "processingError": "序列处理错误"
+  },
+  "footer": {
+    "copyright": "© 2024 生物工具。保留所有权利。",
+    "version": "版本 1.0.0",
+    "brandDescription": "跨平台的生物序列处理工具套件，支持 DNA、RNA 和蛋白质序列的各种操作。",
+    "platformSupport": "支持 Web、小程序、Raycast 和 uTools 等多个平台。",
+    "features": "功能特性",
+    "platforms": "平台支持",
+    "webApp": "Web 应用",
+    "miniProgram": "小程序",
+    "raycastExtension": "Raycast 插件",
+    "utoolsPlugin": "uTools 插件",
+    "reverseComplement": "序列反向互补",
+    "transcriptionReverseTranscription": "转录与反转录",
+    "proteinTranslation": "蛋白质翻译",
+    "sequenceAnalysis": "序列统计分析"
+  }
+}

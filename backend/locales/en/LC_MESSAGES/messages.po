@@ -1,0 +1,135 @@
+# English translations for Biotools API
+# Copyright (C) 2024
+# This file is distributed under the same license as the Biotools package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Biotools 1.0\n"
+"POT-Creation-Date: 2024-01-01 12:00+0000\n"
+"PO-Revision-Date: 2024-01-01 12:00+0000\n"
+"Last-Translator: Biotools Team\n"
+"Language: en\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# API Information
+msgid "api_title"
+msgstr "Biotools API"
+
+msgid "api_description"
+msgstr "Bioinformatics sequence processing toolkit API - supports single sequence and FASTA batch processing"
+
+msgid "api_welcome"
+msgstr "Welcome to Biotools API! Visit /docs for interactive documentation."
+
+msgid "api_status_online"
+msgstr "API is running normally"
+
+# Common Messages
+msgid "success"
+msgstr "Success"
+
+msgid "error"
+msgstr "Error"
+
+msgid "invalid_sequence"
+msgstr "Invalid sequence format"
+
+msgid "invalid_sequence_type"
+msgstr "Invalid sequence type. Supported types: dna, rna, protein, auto"
+
+msgid "processing_error"
+msgstr "Error processing sequence"
+
+msgid "file_upload_error"
+msgstr "Error uploading file"
+
+msgid "file_not_fasta"
+msgstr "Uploaded file is not in FASTA format"
+
+# Sequence Types
+msgid "dna_sequence"
+msgstr "DNA sequence"
+
+msgid "rna_sequence"
+msgstr "RNA sequence"
+
+msgid "protein_sequence"
+msgstr "Protein sequence"
+
+msgid "unknown_sequence"
+msgstr "Unknown sequence type"
+
+# Operations
+msgid "reverse_complement"
+msgstr "Reverse complement"
+
+msgid "transcription"
+msgstr "Transcription (DNA to RNA)"
+
+msgid "reverse_transcription"
+msgstr "Reverse transcription (RNA to DNA)"
+
+msgid "translation"
+msgstr "Translation to protein"
+
+msgid "uppercase_conversion"
+msgstr "Convert to uppercase"
+
+msgid "lowercase_conversion"
+msgstr "Convert to lowercase"
+
+msgid "sequence_statistics"
+msgstr "Sequence statistics"
+
+# Field Descriptions
+msgid "input_sequence_desc"
+msgstr "Input biological sequence"
+
+msgid "sequence_type_desc"
+msgstr "Sequence type: dna, rna, protein, auto"
+
+msgid "sequence_id_desc"
+msgstr "Sequence identifier"
+
+msgid "fasta_content_desc"
+msgstr "FASTA format sequence content"
+
+msgid "processing_result_desc"
+msgstr "Processing result"
+
+msgid "original_sequence_desc"
+msgstr "Original sequence"
+
+msgid "batch_results_desc"
+msgstr "Batch processing results"
+
+msgid "total_count_desc"
+msgstr "Total sequence count"
+
+msgid "success_count_desc"
+msgstr "Successfully processed count"
+
+msgid "error_count_desc"
+msgstr "Error count"
+
+msgid "error_details_desc"
+msgstr "Error details"
+
+# Statistics
+msgid "sequence_length"
+msgstr "Sequence length"
+
+msgid "nucleotide_composition"
+msgstr "Nucleotide composition"
+
+msgid "amino_acid_composition"
+msgstr "Amino acid composition"
+
+msgid "gc_content"
+msgstr "GC content"
+
+msgid "molecular_weight"
+msgstr "Molecular weight"

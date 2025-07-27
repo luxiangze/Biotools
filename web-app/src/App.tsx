@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { BiotoolsAPI, SequenceOutput, SequenceStats } from './services/api';
 import SequenceProcessor from './components/SequenceProcessor';
 import SequenceStatsDisplay from './components/SequenceStatsDisplay';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import './i18n';
 import './index.css';
 
 interface Tool {
@@ -15,6 +18,7 @@ interface Tool {
 }
 
 const App: React.FC = () => {
+  const { t } = useTranslation();
   const [sequence, setSequence] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const [stats, setStats] = useState<SequenceStats | null>(null);
@@ -26,43 +30,43 @@ const App: React.FC = () => {
   const tools: Tool[] = [
     {
       id: 'reverse-complement',
-      name: '反向互补',
-      description: '生成 DNA 序列的反向互补序列',
+      name: t('tools.reverseComplement.name'),
+      description: t('tools.reverseComplement.description'),
       category: 'conversion',
       action: (seq) => BiotoolsAPI.reverseComplement({ sequence: seq })
     },
     {
       id: 'transcribe',
-      name: 'DNA 转录',
-      description: '将 DNA 序列转录为 RNA 序列 (T→U)',
+      name: t('tools.transcribe.name'),
+      description: t('tools.transcribe.description'),
       category: 'conversion',
       action: (seq) => BiotoolsAPI.transcribe({ sequence: seq })
     },
     {
       id: 'reverse-transcribe',
-      name: 'RNA 反转录',
-      description: '将 RNA 序列反转录为 DNA 序列 (U→T)',
+      name: t('tools.reverseTranscribe.name'),
+      description: t('tools.reverseTranscribe.description'),
       category: 'conversion',
       action: (seq) => BiotoolsAPI.reverseTranscribe({ sequence: seq })
     },
     {
       id: 'translate',
-      name: '翻译',
-      description: '将 DNA/RNA 序列翻译为蛋白质序列',
+      name: t('tools.translate.name'),
+      description: t('tools.translate.description'),
       category: 'conversion',
       action: (seq) => BiotoolsAPI.translate({ sequence: seq })
     },
     {
       id: 'uppercase',
-      name: '转大写',
-      description: '将序列转换为大写字母',
+      name: t('tools.uppercase.name'),
+      description: t('tools.uppercase.description'),
       category: 'basic',
       action: (seq) => BiotoolsAPI.toUppercase({ sequence: seq })
     },
     {
       id: 'lowercase',
-      name: '转小写',
-      description: '将序列转换为小写字母',
+      name: t('tools.lowercase.name'),
+      description: t('tools.lowercase.description'),
       category: 'basic',
       action: (seq) => BiotoolsAPI.toLowercase({ sequence: seq })
     }

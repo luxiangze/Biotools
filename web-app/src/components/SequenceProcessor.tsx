@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface Tool {
   id: string;
@@ -31,6 +32,8 @@ const SequenceProcessor: React.FC<SequenceProcessorProps> = ({
   onClearAll,
   onCopyResult,
 }) => {
+  const { t } = useTranslation();
+  
   const toolsByCategory = {
     basic: tools.filter(tool => tool.category === 'basic'),
     conversion: tools.filter(tool => tool.category === 'conversion'),
@@ -38,31 +41,31 @@ const SequenceProcessor: React.FC<SequenceProcessorProps> = ({
   };
 
   const categoryNames = {
-    basic: '基础操作',
-    conversion: '序列转换',
-    analysis: '序列分析',
+    basic: t('tools.categories.basic'),
+    conversion: t('tools.categories.conversion'),
+    analysis: t('tools.categories.analysis'),
   };
 
   return (
     <div className="space-y-6">
       {/* 输入区域 */}
       <div className="tool-card">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">序列输入</h2>
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('interface.sequenceInput')}</h2>
         <div className="space-y-4">
           <div>
             <label htmlFor="sequence-input" className="block text-sm font-medium text-gray-700 mb-2">
-              输入生物序列 (DNA/RNA/蛋白质)
+              {t('interface.inputLabel')}
             </label>
             <textarea
               id="sequence-input"
               value={sequence}
               onChange={(e) => onSequenceChange(e.target.value)}
-              placeholder="请输入您的生物序列，例如：ATCGATCGATCG"
+              placeholder={t('interface.inputPlaceholder')}
               className="sequence-input"
               rows={4}
             />
             <p className="mt-2 text-sm text-gray-500">
-              支持 DNA、RNA 和蛋白质序列。系统会自动检测序列类型。
+              {t('interface.inputDescription')}
             </p>
           </div>
 
@@ -86,7 +89,7 @@ const SequenceProcessor: React.FC<SequenceProcessorProps> = ({
 
       {/* 工具按钮 */}
       <div className="tool-card">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">处理工具</h2>
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('interface.availableTools')}</h2>
         <div className="space-y-6">
           {Object.entries(toolsByCategory).map(([category, categoryTools]) => {
             if (categoryTools.length === 0) return null;
@@ -123,7 +126,7 @@ const SequenceProcessor: React.FC<SequenceProcessorProps> = ({
             onClick={onClearAll}
             className="px-4 py-2 text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors duration-200"
           >
-            清空所有
+            {t('interface.clear')}
           </button>
         </div>
       </div>
@@ -132,13 +135,13 @@ const SequenceProcessor: React.FC<SequenceProcessorProps> = ({
       {(result || loading) && (
         <div className="tool-card">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-gray-900">处理结果</h2>
+            <h2 className="text-lg font-semibold text-gray-900">{t('interface.result')}</h2>
             {result && (
               <button
                 onClick={onCopyResult}
                 className="px-3 py-1 text-sm text-primary-600 bg-primary-50 rounded-md hover:bg-primary-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors duration-200"
               >
-                复制结果
+                {t('interface.copy')}
               </button>
             )}
           </div>
@@ -146,7 +149,7 @@ const SequenceProcessor: React.FC<SequenceProcessorProps> = ({
           {loading ? (
             <div className="flex items-center justify-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
-              <span className="ml-3 text-gray-600">处理中...</span>
+              <span className="ml-3 text-gray-600">{t('interface.processing')}</span>
             </div>
           ) : (
             <textarea
@@ -154,7 +157,7 @@ const SequenceProcessor: React.FC<SequenceProcessorProps> = ({
               readOnly
               className="sequence-output"
               rows={4}
-              placeholder="处理结果将显示在这里"
+              placeholder={t('interface.result')}
             />
           )}
         </div>

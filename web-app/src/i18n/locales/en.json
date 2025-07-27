@@ -1,0 +1,105 @@
+{
+  "app": {
+    "title": "Biotools",
+    "subtitle": "Bioinformatics Sequence Processing Toolkit",
+    "description": "Professional bioinformatics tools for DNA, RNA, and protein sequence analysis"
+  },
+  "navigation": {
+    "home": "Home",
+    "tools": "Tools",
+    "about": "About",
+    "language": "Language"
+  },
+  "tools": {
+    "categories": {
+      "basic": "Basic Tools",
+      "conversion": "Sequence Conversion",
+      "analysis": "Sequence Analysis"
+    },
+    "reverseComplement": {
+      "name": "Reverse Complement",
+      "description": "Generate reverse complement of DNA sequence"
+    },
+    "transcribe": {
+      "name": "DNA Transcription",
+      "description": "Transcribe DNA sequence to RNA (T→U)"
+    },
+    "reverseTranscribe": {
+      "name": "RNA Reverse Transcription",
+      "description": "Reverse transcribe RNA sequence to DNA (U→T)"
+    },
+    "translate": {
+      "name": "Translation",
+      "description": "Translate DNA/RNA sequence to protein"
+    },
+    "uppercase": {
+      "name": "To Uppercase",
+      "description": "Convert sequence to uppercase letters"
+    },
+    "lowercase": {
+      "name": "To Lowercase",
+      "description": "Convert sequence to lowercase letters"
+    },
+    "stats": {
+      "name": "Sequence Statistics",
+      "description": "Calculate sequence composition and properties"
+    }
+  },
+  "interface": {
+    "sequenceInput": "Sequence Input",
+    "inputLabel": "Enter biological sequence (DNA/RNA/Protein)",
+    "inputPlaceholder": "Enter your biological sequence here, e.g., ATCGATCGATCG",
+    "inputDescription": "Supports DNA, RNA and protein sequences. System will automatically detect sequence type.",
+    "sequenceType": "Sequence Type",
+    "autoDetect": "Auto Detect",
+    "dna": "DNA",
+    "rna": "RNA",
+    "protein": "Protein",
+    "process": "Process",
+    "processing": "Processing...",
+    "clear": "Clear All",
+    "copy": "Copy Result",
+    "copied": "Copied!",
+    "result": "Result",
+    "originalSequence": "Original Sequence",
+    "processedSequence": "Processed Sequence",
+    "processSequence": "Process Sequence",
+    "availableTools": "Available Tools"
+  },
+  "statistics": {
+    "length": "Length",
+    "composition": "Composition",
+    "gcContent": "GC Content",
+    "molecularWeight": "Molecular Weight",
+    "sequenceType": "Sequence Type"
+  },
+  "status": {
+    "apiOnline": "API Online",
+    "apiOffline": "API Offline",
+    "checking": "Checking connection...",
+    "error": "Error occurred",
+    "success": "Success"
+  },
+  "errors": {
+    "invalidSequence": "Invalid sequence format",
+    "networkError": "Network connection error",
+    "serverError": "Server error occurred",
+    "processingError": "Error processing sequence"
+  },
+  "footer": {
+    "copyright": "© 2024 Biotools. All rights reserved.",
+    "version": "Version 1.0.0",
+    "brandDescription": "Cross-platform bioinformatics sequence processing toolkit supporting DNA, RNA and protein sequence operations.",
+    "platformSupport": "Supports Web, Mini-programs, Raycast and uTools platforms.",
+    "features": "Features",
+    "platforms": "Platforms",
+    "webApp": "Web App",
+    "miniProgram": "Mini Program",
+    "raycastExtension": "Raycast Extension",
+    "utoolsPlugin": "uTools Plugin",
+    "reverseComplement": "Reverse Complement",
+    "transcriptionReverseTranscription": "Transcription & Reverse Transcription",
+    "proteinTranslation": "Protein Translation",
+    "sequenceAnalysis": "Sequence Analysis"
+  }
+}
