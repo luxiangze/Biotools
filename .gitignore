@@ -1,0 +1,21 @@
+# System files
+.DS_Store
+.history
+
+# Node.js
+node_modules/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Pixi
+.pixi/
+
+# IDE
+.vscode/
+.idea/
